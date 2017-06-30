@@ -10,20 +10,31 @@ class App extends React.Component {
 
     constructor(props) {
         super(props);
+
+        this.state = {
+            title : "MD2 React app",
+            students : [
+                {name: "Bob", age: 18},
+                {name: "Bob 2", age: 14},
+                {name: "Bob 3", age: 19},
+                {name: "Bob 4", age: 28}
+            ]
+        };
+
+
     }
 
     render() {
         return (
             <div className="app">
-                MD2 React app
-                <Student
-                    name="Berend"
-                    age="34"
-                />
-                <Student />
-                <Student />
-                <Student />
-                <Student />
+                {this.state.title}
+                {this.state.students.map(student => (
+                    <Student
+                        name={student.name}
+                        age={student.age}
+                        onSelect={name => console.log(name)}
+                    />
+                ))}
             </div>
         );
     }
