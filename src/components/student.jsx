@@ -1,15 +1,6 @@
 import React from 'react';
 
-/**
- * Student component
- * @param props
- * @returns {XML}
- */
 class Student extends React.Component {
-
-    constructor(props) {
-        super(props);
-    }
 
     render() {
         return (
@@ -25,5 +16,4 @@ class Student extends React.Component {
     }
 
 }
-
 export default Student;
