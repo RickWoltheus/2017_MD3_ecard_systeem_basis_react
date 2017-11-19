@@ -1,4 +1,4 @@
-# MD2 start met React
+# React template incl. SASS
 
 * clone deze repository naar je computer
 
