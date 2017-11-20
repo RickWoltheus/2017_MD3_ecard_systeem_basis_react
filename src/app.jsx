@@ -1,26 +1,36 @@
 import React from 'react';
-import Student from './components/student';
+import Item from './components/item';
+import Marker from './components/marker';
 
 class App extends React.Component {
 
     constructor(props) {
         super(props);
 
-        this.students = [
-            { name : "Bob", age : 17 },
-            { name : "Bob2", age : 18 },
-            { name : "Bob3", age : 19 },
-            { name : "Bob4", age : 20 },
-            { name : "Bob5", age : 33 }
-        ];
-
+        this.card =
+            {_id:"23[049838954]",
+                name: "Amins_Ecard",
+                date: "21-04-2016",
+                objects: [
+                    {objectName: "bigshaq", x: 0, y: 0, src: "src/images/demo.png"},
+                    {objectName: "vegetable", x: 100, y: 0, src: "src/images/2.png"}]
+            }
     }
-
-    renderStudent(currentStudent, i){
+    renderItems(currentItem, i){
         return (
-            <Student
-                name={currentStudent.name}
-                age={currentStudent.age}
+            <Marker
+                x={currentItem.x}
+                y={currentItem.y}
+                name={currentItem.objectName}
+                src={currentItem.src}
+                onUpdate={object =>
+                    this.card.objects[object.objectName].setState({
+                        objectName : object.objectName,
+                        x : object.x,
+                        y : object.y
+                })
+                }
+
             />
         );
     }
@@ -28,19 +38,9 @@ class App extends React.Component {
     render() {
         return (
             <div className="app">
-                MD2 React app om te oefenen
-                <Student
-                    name="Berend"
-                    age="34"
-                />
-                <Student />
-                <Student />
-                <Student
-                    name="Bob"
-                />
-                <Student />
-                Maar ik wil er ook een aantal in een loop renderen:
-                {this.students.map(this.renderStudent)}
+
+                {this.card.objects.map(this.renderItems)}
+
             </div>
         );
     }

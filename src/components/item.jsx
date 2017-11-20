@@ -1,8 +1,6 @@
 import React from 'react';
 
-class Student extends React.Component {
-
-    
+class Item extends React.Component {
 
     render() {
 
@@ -11,15 +9,15 @@ class Student extends React.Component {
 
         return (
             <div className="student">
-                <div className="student__name">
-                    {this.props.name}
+                <div className="student__src">
+                   {this.props.src}
                 </div>
-                <div className="student__age">
-                    {this.props.age}
+                <div className="student__src">
+                    {this.props.src}
                 </div>
             </div>
         );
     }
 
 }
-export default Student;
+export default Item;

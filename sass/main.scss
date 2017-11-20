@@ -1,16 +1,15 @@
 /*
  | ITCSS STRUCTURE: naming convention _<layer>.<partial>.scss
  */
-
 /*
  | SETTINGS: base font size, colour palettes
  */
-@import 'settings/_settings.font';
+
 
 /*
  | TOOLS: mixins and functions
  */
-@import 'tools/_tools.boxsizing';
+
 
 /*
  | GENERIC: CSS resets, normalize
@@ -27,8 +26,7 @@
 /*
  | COMPONENTS
  */
-@import 'components/_components.student';
-@import 'components/_components.studentdetail';
+
 
 /*
  | TRUMPS: utility and helper classes, hacks and overrides
