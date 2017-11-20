@@ -104,7 +104,7 @@ class Marker extends React.Component {
                  onMouseDown={(e)=>this.startDrag(e.pageX, e.pageY)}
                  style={style}
             >
-                {this.state.y},{this.state.x}
+
             </div>
         );
     }

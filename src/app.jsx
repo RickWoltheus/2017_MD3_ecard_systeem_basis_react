@@ -6,7 +6,6 @@ class App extends React.Component {
 
     constructor(props) {
         super(props);
-
         this.card =
             {_id:"23[049838954]",
                 name: "Amins_Ecard",
@@ -15,6 +14,7 @@ class App extends React.Component {
                     {objectName: "bigshaq", x: 0, y: 0, src: "src/images/demo.png"},
                     {objectName: "vegetable", x: 100, y: 0, src: "src/images/2.png"}]
             }
+
     }
     renderItems(currentItem, i){
         return (
@@ -23,13 +23,10 @@ class App extends React.Component {
                 y={currentItem.y}
                 name={currentItem.objectName}
                 src={currentItem.src}
-                onUpdate={object =>
-                    this.card.objects[object.objectName].setState({
-                        objectName : object.objectName,
-                        x : object.x,
-                        y : object.y
-                })
-                }
+                onUpdate={object => {
+                    //this.setState( { x : object.x, y : object.y } );
+                    console.log(object, i);
+                }}
 
             />
         );
