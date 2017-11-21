@@ -1,0 +1,25 @@
+$margin: 10px;
+
+.catergory {
+  transition: 0.1s all ease-in-out;
+  background: #003399;
+  width: 300px;
+  min-height: 10px;
+  margin-bottom: $margin;
+  color: #ffcc00;
+  padding: $margin;
+  position: relative;
+  cursor: pointer;
+
+
+  &__name {
+    display: inline;
+    margin-right: $margin;
+  }
+
+  &:hover {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+
+}
