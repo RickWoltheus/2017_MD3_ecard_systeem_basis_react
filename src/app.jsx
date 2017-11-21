@@ -12,7 +12,7 @@ class App extends React.Component {
                 date: "21-04-2016",
                 objects: [
                     {objectName: "bigshaq", x: 0, y: 0, src: "src/images/demo.png"},
-                    {objectName: "vegetable", x: 100, y: 0, src: "src/images/2.png"}]
+                    {objectName: "vegetable", x: 0, y: 315, src: "src/images/2.png"}]
             }
 
     }
@@ -24,7 +24,7 @@ class App extends React.Component {
                 name={currentItem.objectName}
                 src={currentItem.src}
                 onUpdate={object => {
-                    //this.setState( { x : object.x, y : object.y } );
+                    this.setState( { x : object.x, y : object.y } );
                     console.log(object, i);
                 }}
 
@@ -33,11 +33,17 @@ class App extends React.Component {
     }
 
     render() {
+        const style = {
+            backgroundColor: "black",
+            backgroundImage: "url('src/images/background.jpg')",
+
+        };
         return (
-            <div className="app">
-
+            <div
+                className="app"
+            >
                 {this.card.objects.map(this.renderItems)}
-
+                <img src="src/images/background.jpg" />
             </div>
         );
     }
