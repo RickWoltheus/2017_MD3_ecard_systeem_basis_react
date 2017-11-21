@@ -80,8 +80,9 @@ class Marker extends React.Component {
         this.lastMouseX = mouseX;
         this.lastMouseY = mouseY;
 
-        this.state.size
+        //this.state.size
     }
+
 
     render() {
 
