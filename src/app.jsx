@@ -24,7 +24,7 @@ class App extends React.Component {
                 name={currentItem.objectName}
                 src={currentItem.src}
                 onUpdate={object => {
-                    this.setState( { x : object.x, y : object.y } );
+                    //this.setState( { x : object.x, y : object.y } );
                     console.log(object, i);
                 }}
 

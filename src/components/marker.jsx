@@ -7,9 +7,9 @@ class Marker extends React.Component {
 
         this.state = {
             x : this.props.x,
-            y : 320,
-            name : this.props.name
-
+            y : this.props.y,
+            name : this.props.name,
+            size : 100
 
         };
         this.isDragging = false;
@@ -44,12 +44,6 @@ class Marker extends React.Component {
         document.addEventListener('mousemove', this.handleDrag, false);
     }
 
-    /**
-     * function to calculate width and heigt on y
-     */
-    calcSize = () => {
-
-    };
     /**
      * Function to stop dragging
      */
@@ -86,6 +80,7 @@ class Marker extends React.Component {
         this.lastMouseX = mouseX;
         this.lastMouseY = mouseY;
 
+        this.state.size
     }
 
     render() {
