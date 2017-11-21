@@ -92,8 +92,9 @@ class Marker extends React.Component {
             left : this.state.x,
             top : this.state.y,
             position: "absolute",
-            height: "100px",
-            width: "100px",
+            height: "200px",
+            width: "200px",
+
             backgroundImage: "url(" + this.props.src + ")",
             backgroundSize: "cover"
 

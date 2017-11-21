@@ -14,15 +14,25 @@ class App extends React.Component {
         // });
         this.assets =
             {
+                light: [
+                    {id: 1, objectName: "licht1", x: 0, y: 0, src: "src/images/lichten/licht1.png"},
+                    {id: 2, objectName: "licht2", x: 0, y: 0, src: "src/images/lichten/licht2.png"},
+                    {id: 3, objectName: "licht3", x: 0, y: 0, src: "src/images/lichten/licht3.png"}
+                ],
                 furniture: [
-                    {id: 1, objectName: "couch", x: 0, y: 0, src: "src/images/demo.png"},
-                    {id: 2, objectName: "chair", x: 0, y: 0, src: "src/images/2.png"},
-                    {id: 3, objectName: "table", x: 0, y: 0, src: "src/images/demo.png"}
-                    ],
-                art: [
-                    {id: 1, objectName: "sculpture", x: 0, y: 0, src: "src/images/demo.png"},
-                    {id: 1, objectName: "vase", x: 0, y: 0, src: "src/images/demo.png"},
-                    {id: 1, objectName: "painting", x: 0, y: 0, src: "src/images/demo.png"}
+                    {id: 1, objectName: "meubel1", x: 0, y: 0, src: "src/images/meubel/meubel1.png"},
+                    {id: 1, objectName: "meubel2", x: 0, y: 0, src: "src/images/meubel/meubel2.png"},
+                    {id: 1, objectName: "meubel3", x: 0, y: 0, src: "src/images/meubel/meubel3.png"}
+                ],
+                nature: [
+                    {id: 1, objectName: "natuur1", x: 0, y: 0, src: "src/images/natuur/natuur1.png"},
+                    {id: 1, objectName: "natuur2", x: 0, y: 0, src: "src/images/natuur/natuur2.png"},
+                    {id: 1, objectName: "natuur3", x: 0, y: 0, src: "src/images/natuur/natuur3.png"}
+                ],
+                technology: [
+                    {id: 1, objectName: "technologie1", x: 0, y: 0, src: "src/images/technologie/techno1.png"},
+                    {id: 1, objectName: "technologie2", x: 0, y: 0, src: "src/images/technologie/techno2.png"},
+                    {id: 1, objectName: "technologie3", x: 0, y: 0, src: "src/images/technologie/techno3.png"}
                 ]
 
             };
@@ -32,9 +42,6 @@ class App extends React.Component {
                 name: "Amins_Ecard",
                 date: "21-04-2016",
                 objects: [
-                    {id: 1, objectName : "bigshaq", x: 0, y: 0, src : "src/images/demo.png"},
-                    {id: 25, objectName : "vegetable", x: 0, y: 315, src : "src/images/2.png"},
-                    {id: 2, objectName : "Gold Rush", x : 0 , y : 300, src : "src/images/background.jpg"}
                     ]
             }
 
@@ -102,9 +109,19 @@ class App extends React.Component {
             >
                 <div className="menu">
                     <div className="app">
-                        IKEA POSTCARD
+                        <h1>IKEA POSTCARD</h1>
+                        <h3>Licht</h3>
+                        {this.assets.light.map(this.renderMenuAssets)}
+
                         <h3>Meubels</h3>
                         {this.assets.furniture.map(this.renderMenuAssets)}
+
+                        <h3>Natuur</h3>
+                        {this.assets.nature.map(this.renderMenuAssets)}
+
+                        <h3>Technologie</h3>
+                        {this.assets.technology.map(this.renderMenuAssets)}
+
                     </div>
                 </div>
                 <div className="room-wrapper">
