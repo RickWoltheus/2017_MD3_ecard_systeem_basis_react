@@ -93,14 +93,16 @@ class Marker extends React.Component {
             top : this.state.y,
             position: "absolute",
             height: "200px",
-            width: "200px",
+            width: "400px",
 
             backgroundImage: "url(" + this.props.src + ")",
-            backgroundSize: "cover"
+            backgroundPosition: "center top%",
+            backgroundSize: "auto 100%",
+            backgroundRepeat: "no-repeat"
 
 
 
-        };
+    };
 
         return (
             <div className={markerClass}
